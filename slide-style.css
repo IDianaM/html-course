@@ -14,6 +14,29 @@ h1 {
     font-family: 'Arial', sans-serif;
 }
 
+.advice {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    background: #2e2e38;
+    color: white;
+}
+
+.bulb {
+    font-size: 32px!important;
+}
+
+.advice-content {
+    display: flex;
+    align-items: baseline;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
 .text {
     display: flex;
     gap: 30px;
@@ -23,10 +46,31 @@ h1 {
 code {
     font-size: 32px;
     white-space: nowrap;
+    padding: 0 10px;
 }
 
 .small {
     position: absolute;
     font-size: 12px;
     bottom: 0;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.image {
+    width: 500px;
+}
+
+.picture-meme {
+    background-image: url("assets/meme.png");
+    width: 702px;
+    height: 265px;
+}
+
+th {
+    text-align: start;
 }

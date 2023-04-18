@@ -37,18 +37,20 @@
     position:relative;
     opacity:0;
 }
-.tags a:hover { color:#750B0B !important; text-decoration:underline !important; }
+.tags a:hover { color: #0b6975 !important; }
 
 .tags{
     overflow:hidden;
-    height: 500px;
-    padding-top:100px;
+    height: 700px;
+    padding-top:200px;
     font-size:1.5em !important;
     line-height:3px;
 }
 .sidebar-tags dt{ display:none; }
 .tags .comma{ display:none; }
-
+.tags > a {
+    text-decoration: none;
+}
 
 
 @keyframes tagmove

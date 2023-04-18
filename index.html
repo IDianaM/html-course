@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Unbounded:wght@500;600&display=swap"
           rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
 </head>
 <body>
 <div class="wrapper">
@@ -49,6 +51,14 @@
                     <code>&lt;body&gt;</code>
                     <span> содержит весь контент, который появится на странице: текст, изображения, теги, скрипты JavaScript и так далее. </span>
                 </div>
+
+                <div class="advice">
+                    <span class="material-symbols-outlined bulb">tips_and_updates</span>
+                    <div class="advice-content">
+                        По спецификации тег <code>&lt;body&gt;</code> не обязательный, так что можно его и не писать — браузер
+                        сам поймёт, что выводить на странице по типу тега.
+                    </div>
+                </div>
             </div>
         </div>
         <div class="slides slide2">
@@ -57,29 +67,33 @@
                 <dl class="sidebar-block sidebar-tags tags-cloud">
                     <dt>Tags</dt>
                     <dd class="tags">
-                        <a href="https://doka.guide/html/div/"  rel="tag" style="font-size:1em;" target="_self">div</a>
+                        <a href="https://doka.guide/html/div/" rel="tag" style="font-size:1em;" target="_self">div</a>
                         <span class="comma">,</span>
-                        <a href="https://doka.guide/html/span/"  rel="tag" style="font-size:2.08em;" target="_self">span</a>
+                        <a href="https://doka.guide/html/span/" rel="tag" style="font-size:2.08em;"
+                           target="_self">span</a>
                         <span class="comma">,</span>
-                        <a href="https://doka.guide/html/header/"  rel="tag" style="font-size:1em;" target="_self">header</a>
+                        <a href="https://doka.guide/html/header/" rel="tag" style="font-size:1em;"
+                           target="_self">header</a>
                         <span class="comma">,</span>
                         <a href="https://doka.guide/html/footer/" rel="tag" style="font-size:2.08em;" target="_self">footer</a>
                         <span class="comma">,</span>
-                        <a href="https://doka.guide/html/main/"  rel="tag" style="font-size:1em;" target="_self">main</a>
+                        <a href="https://doka.guide/html/main/" rel="tag" style="font-size:1em;" target="_self">main</a>
                         <span class="comma">,</span>
-                        <a href="https://doka.guide/html/nav/"  rel="tag" style="font-size:1em;" target="_self">nav</a>
+                        <a href="https://doka.guide/html/nav/" rel="tag" style="font-size:1em;" target="_self">nav</a>
                         <span class="comma">,</span>
-                        <a href="https://doka.guide/html/section/"  rel="tag" style="font-size:1em;" target="_self">section</a>
+                        <a href="https://doka.guide/html/section/" rel="tag" style="font-size:1em;" target="_self">section</a>
                         <span class="comma">,
                         </span>
-                        <a href="https://doka.guide/html/article/"  rel="tag" style="font-size:2.08em;" target="_self">article</a>
+                        <a href="https://doka.guide/html/article/" rel="tag" style="font-size:2.08em;" target="_self">article</a>
                         <span class="comma">,</span>
-                        <a href="https://doka.guide/html/aside/"  rel="tag" style="font-size:1em;" target="_self">aside</a>
+                        <a href="https://doka.guide/html/aside/" rel="tag" style="font-size:1em;"
+                           target="_self">aside</a>
                         <span class="comma">,</span>
-                        <a href="https://doka.guide/html/data/"  rel="tag" style="font-size:2.08em;" target="_self">data</a>
+                        <a href="https://doka.guide/html/data/" rel="tag" style="font-size:2.08em;"
+                           target="_self">data</a>
                         <span class="comma">,</span>
                         <strong class="tags-all">
-                        <a href="https://doka.guide/html/" title="Show all tags" target="_self">…</a></strong>
+                            <a href="https://doka.guide/html/" title="Show all tags" target="_self">…</a></strong>
                     </dd>
                 </dl>
 
@@ -88,11 +102,73 @@
         </div>
         <div class="slides slide3">
             <h1>HTML. Картинки</h1>
-            <div class="container"></div>
+            <div class="container">
+                <div class="image-container">
+                    <img class="image" src="assets/meme.png" alt="Meme"
+                         srcset="
+                         assets/meme.png,
+                         assets/meme-big.png 2x">
+                    <span class="text"> с помощью &lt;img&gt;</span>
+                </div>
+
+                <div class="image-container">
+                    <figure>
+                        <img src="assets/meme.png" alt="Meme">
+                        <figcaption>Meme</figcaption>
+                    </figure>
+
+                    <span class="text"> с помощью &lt;figure&gt;</span>
+                </div>
+
+                <div class="image-container">
+                    <div class="picture-meme"></div>
+
+                    <span class="text"> с помощью <code>background-image</code></span>
+                </div>
+            </div>
         </div>
         <div class="slides slide4">
             <h1>HTML. Таблицы</h1>
-            <div class="container"></div>
+            <div class="container">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Место</th>
+                        <th>Оценка</th>
+                        <th>Название фильма</th>
+                        <th>Год выхода</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>9.1</td>
+                        <td>Зелёная миля</td>
+                        <td>1999</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>9.1</td>
+                        <td>Побег из Шоушенка</td>
+                        <td>1994</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>8.6</td>
+                        <td>Властелин колец: Возвращение Короля</td>
+                        <td>2003</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="advice">
+                    <span class="material-symbols-outlined bulb">tips_and_updates</span>
+                    <div class="advice-content">
+                        Если вы не используете ни один из <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>,
+                        то браузер самостоятельно добавит <code>&lt;tbody&gt;</code> при отрисовке таблицы.
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="slides slide5">
             <h1>HTML. Подключение скриптов</h1>
