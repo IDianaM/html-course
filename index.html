@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="slide-style.css">
     <link rel="stylesheet" href="tags.css">
     <link rel="stylesheet" href="specificity.css">
+    <link rel="stylesheet" href="block.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Unbounded:wght@500;600&display=swap"
@@ -251,7 +252,18 @@
         </div>
         <div class="slides slide8">
             <h1>CSS. Блочная модель</h1>
-            <div class="container"></div>
+            <div class="container">
+                <div id="block" class="block"><h1>Изучи меня</h1></div>
+
+                <div class="hidden-text">
+                    <h2 class="text">width: 400px;</h2>
+                    <h2 class="text">height: 400px;</h2>
+                    <h2 class="text">margin: 20px;</h2>
+                    <h2 class="text">padding: 30px;</h2>
+                    <h2 class="text">top: 30px;</h2>
+                    <h2 class="text">left: 400px;</h2>
+                </div>
+            </div>
         </div>
         <div class="slides slide9">
             <h1>CSS. Селекторы</h1>
@@ -259,7 +271,17 @@
         </div>
         <div class="slides slide10">
             <h1>CSS. Единицы измерения</h1>
-            <div class="container"></div>
+            <div class="container">
+                <h2>Абсолютные</h2>
+                <div class="units" style="width: 60px">60px</div>
+                <div class="units" style="width: 60mm">60mm</div>
+                <div class="units" style="width: 60pt">60pt</div>
+                <h2>Относительные</h2>
+                <div class="units" style="width: 60%">60%</div>
+                <div class="units" style="width: 60vw">60vw</div>
+                <div class="units" style="width: 60rem">60rem</div>
+                <div class="units" style="width: 60em">60em</div>
+            </div>
         </div>
         <div class="slides slide11">
             <h1>CSS. Псевдо классы и псевдо элементы</h1>
@@ -267,7 +289,20 @@
         </div>
         <div class="slides slide12">
             <h1>CSS. Display</h1>
-            <div class="container"></div>
+            <div class="container">
+                <div class="display-block">
+                    <span>Block</span>
+                    <div class="child"></div>
+                </div>
+                <div class="display-inline">
+                    <span>Inline</span>
+                    <div class="child"></div>
+                </div>
+                <div class="display-flex">
+                    <span>Flex</span>
+                    <div class="child"></div>
+                </div>
+            </div>
         </div>
         <script src="external.js"></script>
     </div>

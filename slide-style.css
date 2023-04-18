@@ -3,6 +3,11 @@ h1 {
     font-size: 48px;
 }
 
+h2 {
+    font-family: 'Unbounded', cursive;
+    font-size: 36px;
+}
+
 .container {
     position: relative;
     display: flex;
@@ -112,4 +117,48 @@ li a:visited {
 
 .table th {
     border-bottom: 2px solid gray;
+}
+
+.block {
+    position: absolute;
+    top: 50%;
+    left: 300px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    padding: 30px;
+    transform: translateY(-50%);
+    background: #0b6975;
+    color: white;
+    border: 10px solid plum;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.hidden-text {
+    position: absolute;
+    top: 50%;
+    left: 300px;
+    transform: translateY(-50%);
+    transition: 0.3s all linear;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.block:hover ~ .hidden-text {
+    opacity: 1;
+    left: 820px;
+}
+
+.block > h1 {
+    user-select: none;
+}
+
+.units {
+    height: 50px;
+    background: #0b6975;
+    color: white;
 }
