@@ -4,6 +4,10 @@
     height: 50px;
 }
 
+.child-inline {
+    display: inline;
+}
+
 .display-block {
     display: block;
     color: white;
@@ -20,4 +24,22 @@
     display: flex;
     color: white;
     background: #0b6975;
+}
+
+.task-container {
+    display: block;
+    margin: 20px 0;
+    background: #063d44;
+}
+
+.task-child {
+    background: #55919b;
+    margin: 30px 0;
+    padding: 20px;
+    color: white;
+}
+
+.task-child + .task-child {
+    background: #ff5a00;
+    margin: 15px 0;
 }
