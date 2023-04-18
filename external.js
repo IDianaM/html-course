@@ -2,6 +2,12 @@ console.log('Hello! Im your first script');
 const div = document.getElementById("parentID");
 const text = 'Здесь имеет место JavaScript!'
 
+function recursionCall() {
+    return recursionCall();
+}
+
+// recursionCall();
+
 let timesRun = 0;
 const interval = setInterval(() => {
     timesRun += 1;
