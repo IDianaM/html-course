@@ -1,0 +1,32 @@
+h1 {
+    font-family: 'Unbounded', cursive;
+    font-size: 48px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 0;
+    height: 80%;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+}
+
+.text {
+    display: flex;
+    gap: 30px;
+    align-items: baseline;
+}
+
+code {
+    font-size: 32px;
+    white-space: nowrap;
+}
+
+.small {
+    position: absolute;
+    font-size: 12px;
+    bottom: 0;
+}
