@@ -27,7 +27,7 @@ h1 {
 }
 
 .bulb {
-    font-size: 32px!important;
+    font-size: 32px !important;
 }
 
 .advice-content {
@@ -73,4 +73,43 @@ code {
 
 th {
     text-align: start;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    counter-reset: li;
+    list-style: none;
+    gap: 10px;
+}
+
+li {
+    font-family: 'Unbounded', cursive;
+    cursor: pointer;
+}
+
+li a {
+    text-decoration: none;
+    transition: 0.3s all linear;
+    color: #2e2e38;
+}
+
+li a:hover,
+li a:visited {
+    color: #0b6975;
+}
+
+.table {
+    border-collapse: collapse
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.table th {
+    border-bottom: 2px solid gray;
 }

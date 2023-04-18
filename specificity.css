@@ -1,0 +1,18 @@
+.veg,
+.veg:visited {
+    font-family: 'Unbounded', cursive;
+    font-size: 48px;
+    color: #2e2e38;
+    transition: 0.3s all linear;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.veg.tomato:hover {
+    color: tomato;
+}
+
+.veg.plum:hover {
+    color: plum;
+}

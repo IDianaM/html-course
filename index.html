@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="slide-style.css">
     <link rel="stylesheet" href="tags.css">
+    <link rel="stylesheet" href="specificity.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Unbounded:wght@500;600&display=swap"
@@ -192,14 +193,64 @@
         </div>
         <div class="slides slide6">
             <h1>CSS. Подключение стилей</h1>
-            <div class="container"></div>
+            <div class="container">
+                <ul class="list">
+                    <li><a href="https://doka.guide/html/style/">&lt;style&gt;</a></li>
+                    <li><a href="https://doka.guide/css/adding-styles/">внешний CSS-файл</a></li>
+                    <li><a href="https://doka.guide/css/adding-styles/">javaScript</a></li>
+                    <li><a href="https://doka.guide/css/adding-styles/">inline-стили</a></li>
+                </ul>
+            </div>
         </div>
         <div class="slides slide7">
-            <h1>CSS. Блочная модель</h1>
-            <div class="container"></div>
+            <h1>CSS. Спецефичность</h1>
+            <div class="container">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Селектор</th>
+                        <th>Вес</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><code>#block section > .list a</code></td>
+                        <td>1.1.2</td>
+                    </tr>
+                    <tr>
+                        <td><code>div#some</code></td>
+                        <td>1.0.1</td>
+                    </tr>
+                    <tr>
+                        <td><code>#some</code></td>
+                        <td>1.0.0</td>
+                    </tr>
+                    <tr>
+                        <td><code>* .list a</code></td>
+                        <td>0.1.1</td>
+                    </tr>
+                    <tr>
+                        <td><code>.class</code></td>
+                        <td>0.1.0</td>
+                    </tr>
+                    <tr>
+                        <td><code>section h1</code></td>
+                        <td>0.0.2</td>
+                    </tr>
+                    <tr>
+                        <td><code>section</code></td>
+                        <td>0.0.1</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <a class="veg tomato plum" href="https://doka.guide/css/specificity/">
+                    Кто я?
+                </a>
+            </div>
         </div>
         <div class="slides slide8">
-            <h1>CSS. Спецефичность</h1>
+            <h1>CSS. Блочная модель</h1>
             <div class="container"></div>
         </div>
         <div class="slides slide9">
