@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="tags.css">
     <link rel="stylesheet" href="specificity.css">
     <link rel="stylesheet" href="block.css">
+    <link rel="stylesheet" href="selectors.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Unbounded:wght@500;600&display=swap"
           rel="stylesheet">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div class="wrapper">
@@ -35,31 +36,36 @@
             <h1>HTML. Обязательные (и не очень!) теги</h1>
 
             <div class="container">
-                <div class="text"><code>&lt;!DOCTYPE html&gt;</code>
-                    <span> сокращение от «тип документа» (document
+                <div class="container-part">
+                    <div class="text"><code>&lt;!DOCTYPE html&gt;</code>
+                        <span> сокращение от «тип документа» (document
                     type). Доктайп говорит браузеру: «работай со страницей в стандартном режиме, пожалуйста». </span>
+                    </div>
+
+                    <div class="text">
+                        <code>&lt;html&gt;</code>
+                        <span> открывает контейнер, в котором находится всё содержимое страницы. Это корневой, или родительский, элемент всего документа. </span>
+                    </div>
+
+                    <div class="text">
+                        <code>&lt;header&gt;</code>
+                        <span> содержит основную информацию о документе: метаданные (например, заголовок окна или кодировку), ссылки на скрипты и таблицы стилей. </span>
+                    </div>
+
+                    <div class="text">
+                        <code>&lt;body&gt;</code>
+                        <span> содержит весь контент, который появится на странице: текст, изображения, теги, скрипты JavaScript и так далее. </span>
+                    </div>
                 </div>
 
-                <div class="text">
-                    <code>&lt;html&gt;</code>
-                    <span> открывает контейнер, в котором находится всё содержимое страницы. Это корневой, или родительский, элемент всего документа. </span>
-                </div>
-
-                <div class="text">
-                    <code>&lt;header&gt;</code>
-                    <span> содержит основную информацию о документе: метаданные (например, заголовок окна или кодировку), ссылки на скрипты и таблицы стилей. </span>
-                </div>
-
-                <div class="text">
-                    <code>&lt;body&gt;</code>
-                    <span> содержит весь контент, который появится на странице: текст, изображения, теги, скрипты JavaScript и так далее. </span>
-                </div>
+                <img src="assets/html-programmer.jpg">
 
                 <div class="advice">
                     <span class="material-symbols-outlined bulb">tips_and_updates</span>
                     <div class="advice-content">
-                        По спецификации тег <code>&lt;body&gt;</code> не обязательный, так что можно его и не писать — браузер
-                        сам поймёт, что выводить на странице по типу тега.
+                        По спецификации тег <code>&lt;body&gt;</code> не обязательный, так что можно его и не писать —
+                        браузер
+                        сам поймёт, что выводить на странице по типу тега. Но лучше не ленись!
                     </div>
                 </div>
             </div>
@@ -202,6 +208,8 @@
                     <li><a href="https://doka.guide/css/adding-styles/">inline-стили</a></li>
                 </ul>
 
+                <img class="image-meme" src="assets/margin-left-air-conditioner.webp" alt="Meme">
+
                 <div class="advice">
                     <span class="material-symbols-outlined bulb">tips_and_updates</span>
                     <div class="advice-content">Обычно используется вариант подключения через внешний файл</div>
@@ -256,7 +264,8 @@
 
                 <div class="advice">
                     <span class="material-symbols-outlined bulb">tips_and_updates</span>
-                    <div class="advice-content">Для ленивых: <a href="https://polypane.app/css-specificity-calculator/">CSS Selector Specificity</a></div>
+                    <div class="advice-content">Для ленивых: <a href="https://polypane.app/css-specificity-calculator/">CSS
+                        Selector Specificity</a></div>
                 </div>
             </div>
         </div>
@@ -277,7 +286,22 @@
         </div>
         <div class="slides slide9">
             <h1>CSS. Селекторы</h1>
-            <div class="container"></div>
+            <div class="container selectors">
+                <div class="selector">
+                    <div class="selector-child">Мои соседи меня не достанут!!!</div>
+                    <div class="selector-child selector-child_siblings">Мои соседи подчеркнуты</div>
+                    <div class="selector-child selector-child_sibling">Мой ближайший сосед корраловый!</div>
+                    <div class="selector-child">Меня подчеркнули!</div>
+                    <div class="selector-child">
+                        <div class="selector-child">
+                            <div class="selector-child">Мне тоже не удалось спрятаться!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="selector">Меня расскрасили по классу</div>
+                <div id="selector" class="selector">Меня расскрасили по id</div>
+                <div>Меня расскрасили по тегу</div>
+            </div>
         </div>
         <div class="slides slide10">
             <h1>CSS. Единицы измерения</h1>
@@ -294,8 +318,18 @@
             </div>
         </div>
         <div class="slides slide11">
-            <h1>CSS. Псевдо классы и псевдо элементы</h1>
-            <div class="container"></div>
+            <h1>CSS. Псевдо-классы и псевдо-элементы</h1>
+            <div class="container">
+                <button class="big-button">Нажми на меня</button>
+
+                <ol class="list-selectors">
+                    <li>Когда</li>
+                    <li>уже</li>
+                    <li>аннонсируют</li>
+                    <li>CSS</li>
+                    <li>движок???</li>
+                </ol>
+            </div>
         </div>
         <div class="slides slide12">
             <h1>CSS. Display</h1>

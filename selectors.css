@@ -1,0 +1,30 @@
+.container.selectors .selector,
+.container.selectors .selector-child {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container.selectors .selector > .selector-child {
+    margin-left: 20px;
+}
+
+.container.selectors #selector {
+    background: darkolivegreen;
+}
+
+.container.selectors .selector {
+    background: cornflowerblue;
+}
+
+.container.selectors div {
+    background: plum;
+}
+
+.selector-child_siblings ~ .selector-child {
+    text-decoration: underline;
+}
+
+.container.selectors .selector-child_sibling + .selector-child {
+    background: #ff5a00;
+}

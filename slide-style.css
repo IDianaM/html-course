@@ -8,7 +8,8 @@ h2 {
     font-size: 36px;
 }
 
-.container {
+.container,
+.container-part {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -66,6 +67,15 @@ code {
     bottom: 0;
 }
 
+.slide1 .container {
+    flex-direction: row;
+}
+
+.slide1 img {
+    width: 300px;
+    height: fit-content;
+}
+
 .image-container {
     display: flex;
     align-items: center;
@@ -84,6 +94,11 @@ code {
 
 th {
     text-align: start;
+}
+
+.slide6 .image-meme {
+    position: absolute;
+    right: 50px;
 }
 
 .list {
@@ -167,4 +182,92 @@ li a:visited {
     height: 50px;
     background: #0b6975;
     color: white;
+}
+
+.big-button {
+    position: relative;
+    border: none;
+    padding: 40px;
+    background: #0b6975;
+    color: white;
+    transition: 0.3s all ease-in-out;
+    border-radius: 10px;
+    font-family: 'Unbounded', cursive;
+    font-size: 48px;
+    cursor: pointer;
+}
+
+.big-button:hover {
+    background: #55919b;
+}
+
+.big-button::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 10px;
+    background: #063d44;
+    transition: 0.3s all ease-in-out;
+}
+
+.big-button:hover::after {
+    width: 100%;
+}
+
+.big-button:active {
+    background: #063d44;
+}
+
+.list-selectors {
+    margin-top: 20px;
+    margin-left: 80px;
+    font-size: 48px;
+}
+
+.list-selectors > li:last-child {
+    color: plum;
+}
+
+.list-selectors > li:nth-child(2) {
+    color: #0b6975;
+}
+
+.list-selectors > li:nth-child(even) {
+    text-decoration: underline;
+}
+
+.list-selectors > li:nth-child(2)::after {
+    content: "(комбинация :nth-child(2) и :nth-child(even))";
+    color: #0b6975;
+    opacity: 0;
+    font-size: 20px;
+    margin-left: 40px;
+    transition: 0.3s all ease-in-out;
+}
+
+.list-selectors > li:nth-child(4)::after {
+    content: "(:nth-child(even))";
+    color: #0b6975;
+    opacity: 0;
+    font-size: 20px;
+    margin-left: 40px;
+    transition: 0.3s all ease-in-out;
+}
+
+.list-selectors > li:nth-child(5)::after {
+    content: "(:last-child)";
+    color: #0b6975;
+    opacity: 0;
+    font-size: 20px;
+    margin-left: 40px;
+    transition: 0.3s all ease-in-out;
+}
+
+.list-selectors > li:nth-child(2):hover::after,
+.list-selectors > li:nth-child(4):hover::after,
+.list-selectors > li:nth-child(5):hover::after {
+    opacity: 1;
 }
