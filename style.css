@@ -105,7 +105,9 @@ body {
 #slide9:checked ~ .controls label:nth-of-type(9),
 #slide10:checked ~ .controls label:nth-of-type(10),
 #slide11:checked ~ .controls label:nth-of-type(11),
-#slide12:checked ~ .controls label:nth-of-type(12) {
+#slide12:checked ~ .controls label:nth-of-type(12),
+#slide13:checked ~ .controls label:nth-of-type(13),
+#slide14:checked ~ .controls label:nth-of-type(14) {
     background: #ddd;
 }
 
@@ -136,7 +138,9 @@ body {
 #slide9:checked ~ .slider > .slide9,
 #slide10:checked ~ .slider > .slide10,
 #slide11:checked ~ .slider > .slide11,
-#slide12:checked ~ .slider > .slide12 {
+#slide12:checked ~ .slider > .slide12,
+#slide13:checked ~ .slider > .slide13,
+#slide14:checked ~ .slider > .slide14 {
     opacity: 1;
     z-index: 1;
     -webkit-transform: scale(1);
